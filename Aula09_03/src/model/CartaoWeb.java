@@ -1,0 +1,16 @@
+package model;
+
+public abstract class CartaoWeb {
+	protected String destinatario;
+	
+	public CartaoWeb(String destinatario){
+		this.destinatario = destinatario;
+	}
+	
+	public abstract void showMessage();
+	
+	@Override
+	public String toString(){
+		return "destinatario: " + this.destinatario;
+	}
+}

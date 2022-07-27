@@ -1,0 +1,112 @@
+package model;
+
+public class Animal {
+	public String nome;
+	public String cor;
+	public int quantidadePatas;
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public int getQuantidadePatas() {
+		return quantidadePatas;
+	}
+
+	public void setQuantidadePatas(int quantidadePatas) {
+		this.quantidadePatas = quantidadePatas;
+	}
+
+	public Animal() {
+
+	}
+
+	public Animal(String nome, String cor, int quantidadePatas) {
+		this.nome = nome;
+		this.cor = cor;
+		this.quantidadePatas = quantidadePatas;
+	}
+
+	public void imprimir() {
+		System.out.print("Nome: " + this.nome + ", " + "Cor: " + this.cor + ", " + "N° Patas: " + this.quantidadePatas
+				+ ", Tipo de Alimentação: ");
+	}
+
+}
+
+package model;
+
+public class Mamifero extends Animal {
+	private String tipoAlimentacao;
+
+	public String getTipoAlimentacao() {
+		return this.tipoAlimentacao;
+	}
+
+	public void setTipoAlimentacao(String tipoAlimentacao) {
+		this.tipoAlimentacao = tipoAlimentacao;
+	}
+
+	public Mamifero() {
+
+	}
+
+	public Mamifero(String nome, String cor, int quantidadePatas, String tipoAlimentacao) {
+		super(nome, cor, quantidadePatas);
+		this.tipoAlimentacao = tipoAlimentacao;
+
+	}
+
+}
+
+package main;
+
+import model.Animal;
+import model.Mamifero;
+
+public class AnimalMain {
+
+	public static void main(String[] args) {
+		Animal animal = new Animal();
+		Mamifero mamifero = new Mamifero();
+
+		animal.setNome("Lia");
+		System.out.println("Nome: " + animal.getNome());
+
+		animal.setCor("branco");
+		System.out.println("Cor: " + animal.getCor());
+
+		animal.setQuantidadePatas(4);
+		System.out.println("N° patas: " + animal.quantidadePatas);
+
+		mamifero.setTipoAlimentacao("ração");
+		System.out.println("Alimento: " + mamifero.getTipoAlimentacao());
+
+		System.out.println("-----------------------------------");
+
+		animal.setNome("Bolinha");
+		System.out.println("Nome: " + animal.getNome());
+
+		animal.setCor("preto");
+		System.out.println("Cor: " + animal.getCor());
+
+		animal.setQuantidadePatas(4);
+		System.out.println("N° patas: " + animal.quantidadePatas);
+
+		mamifero.setTipoAlimentacao("sementes de girassóis");
+		System.out.println("Alimento: " + mamifero.getTipoAlimentacao());
+	}
+
+}

@@ -43,42 +43,24 @@ public class Main {
 		Aluno aluno = new Aluno();
 
 		aluno.setNome("Ana");
-
 		aluno.setMatricula(001);
-
 		lista.add(aluno);
 
-	 aluno = new Aluno();
+		aluno.setNome("Bruno");
+		aluno.setMatricula(002);
+		lista.add(aluno);
 
-		aluno1.setNome("Bruno");
+		aluno.setNome("Carlos");
+		aluno.setMatricula(003);
+		lista.add(aluno);
 
-		aluno1.setMatricula(002);
-
-		lista.add(aluno1);
-
-		Aluno aluno2 = new Aluno();
-
-		aluno2.setNome("Carlos");
-
-		aluno2.setMatricula(003);
-
-		lista.add(aluno2);
-
-		Aluno aluno3 = new Aluno();
-
-		aluno3.setNome("Francisco");
-
-		aluno3.setMatricula(004);
-
-		lista.add(aluno3);
-
-		Aluno aluno4 = new Aluno();
-
-		aluno4.setNome("Gustavo");
-
-		aluno4.setMatricula(005);
-
-		lista.add(aluno4);
+		aluno.setNome("Francisco");
+		aluno.setMatricula(004);
+		lista.add(aluno);
+		
+		aluno.setNome("Gustavo");
+		aluno.setMatricula(005);
+		lista.add(aluno);
 
 		
 		for (int i = 0; i < lista.size(); i++) {
